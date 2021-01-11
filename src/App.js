@@ -2,6 +2,11 @@ import './App.css';
 import axios from 'axios';
 
 function App() {
+
+  const handleSubmit = () => {
+    console.log('test');
+  }
+
   return (
     <div className="App">
       <h1>
@@ -13,7 +18,7 @@ function App() {
         src="https://pastebin.com/i/pastebin_logo_side_outline.png"
         alt="pastebin"
       />
-      <form className="col-10 offset-1">
+      <form className="col-10 offset-1" onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="api_paste_name">Filename</label>
           <input
