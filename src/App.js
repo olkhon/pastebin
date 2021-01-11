@@ -5,15 +5,24 @@ import axios from 'axios';
 
 function App() {
 
-  const [filename, setFilename] = useState('');
-  const [expiration, setExpiration] = useState('');
-  const [code, setCode] = useState('');
+  let [filename, setFilename] = useState('');
+  let [expiration, setExpiration] = useState('');
+  let [code, setCode] = useState('');
+
+  let inputArray = [];
+  inputArray.push(filename, expiration, code);
+
+
 
   console.log(expiration);
 
 
   const handleSubmit = (event) => {
-    alert('test');
+    if (!inputArray.includes('')) {
+
+    }else {
+      alert('empty value')
+    }
     event.preventDefault();
   }
 
