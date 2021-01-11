@@ -3,8 +3,9 @@ import axios from 'axios';
 
 function App() {
 
-  const handleSubmit = () => {
-    console.log('test');
+  const handleSubmit = (event) => {
+    alert('test');
+    event.preventDefault();
   }
 
   return (
@@ -35,7 +36,7 @@ function App() {
             id="api_paste_expire_date"
             name="api_paste_expire_date"
           >
-            <option value="10M" selected>
+            <option defaultValue="10M" >
               10 Minutes
             </option>
             <option value="1H">1 Hour</option>
