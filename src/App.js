@@ -1,7 +1,16 @@
+
+import React, {useState} from 'react';
 import './App.css';
 import axios from 'axios';
 
 function App() {
+
+  const [filename, setFilename] = useState('');
+  const [expiration, setExpiration] = useState('');
+  const [code, setCode] = useState('');
+
+  console.log(expiration);
+
 
   const handleSubmit = (event) => {
     alert('test');
@@ -23,6 +32,7 @@ function App() {
         <div className="form-group">
           <label htmlFor="api_paste_name">Filename</label>
           <input
+            onChange={(e) => setFilename(e.target.value)}
             type="text"
             className="form-control"
             id="api_paste_name"
@@ -31,7 +41,7 @@ function App() {
         </div>
         <div className="form-group">
           <label htmlFor="api_paste_expire_date">Expiration</label>
-          <select
+          <select onChange={(e) => setExpiration(e.target.value)}
             className="custom-select"
             id="api_paste_expire_date"
             name="api_paste_expire_date"
@@ -45,7 +55,7 @@ function App() {
         </div>
         <div class="form-group">
           <label for="api_paste_code">Code</label>
-          <textarea
+          <textarea  onChange={(e) => setCode(e.target.value)}
             class="form-control"
             id="api_paste_code"
             name="api_paste_code"
@@ -58,7 +68,7 @@ function App() {
         <input
           type="hidden"
           name="api_dev_key"
-          value="dc2d94ed4b463f7ee5e73cb4fac5a18f"
+          value="Vzw9fccDLOlfuCnnETD19DDDwpeZS-n7"
         />
         <div className="form-group">
           <button type="submit" className="btn btn-info">
