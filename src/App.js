@@ -18,8 +18,28 @@ function App() {
 
 
   const handleSubmit = (event) => {
-    if (!inputArray.includes('')) {
+    let apiCall = 'https://pastebin.com/api/api_post.php';
+    let headers = new Headers();
 
+    headers.append('Content-Type', 'application/json');
+    headers.append('Accept', 'application/json');
+    headers.append('Origin','http://localhost:3000');
+    headers.append('Access-Control-Allow-Origin', '*',)
+
+    if (!inputArray.includes('')) {
+      axios
+      .post(apiCall, {
+        mode: 'cors',
+        credentials: 'include',
+        method: 'POST',
+        headers: headers
+      })
+      .then(() => {
+
+      })
+      .catch( () => {
+
+      })
     }else {
       alert('empty value')
     }

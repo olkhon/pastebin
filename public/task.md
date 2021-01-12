@@ -8,7 +8,7 @@ To do
 4. Keep the value of filename, expiration &{" "} code in the state
 5. On submit, check if any property of the state (filename,{" "} expiration & code) is empty, if not submit the form
 6. If one element is empty, display a message
-7. Replace ~~~~ by the generated link given by the API
+Replace ~~~~ by the generated link given by the API
 On this exercise, you can use{" "} Fetch {" "} or Axios.
 
 You can find the API documentation here:{" "} https://pastebin.com/api
